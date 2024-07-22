@@ -1,10 +1,10 @@
 export function apply_patch<D>(doc: D, patch: string | Array<any>): D;
 
-export interface InvalidPatch extends Error {
+export class InvalidPatch extends Error {
   new (message: string): InvalidPatch;
 }
 
-export interface PatchApplyError extends Error {
+export class PatchApplyError extends Error {
   new (message: string): PatchApplyError;
 }
 
